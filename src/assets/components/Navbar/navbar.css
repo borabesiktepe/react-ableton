@@ -52,11 +52,17 @@ svg {
   background-color: #fff;
   border: none;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .menu-button img {
   margin-left: 8px;
   width: 12px;
+}
+
+.bottom-items,
+.more {
+  display: none;
 }
 
 @media screen and (max-width: 1280px) {
@@ -68,4 +74,68 @@ svg {
 }
 
 @media screen and (max-width: 1020px) {
+  nav .menu-items {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90%;
+    background-color: #0000ff;
+    z-index: -1;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  nav ul.active {
+    max-height: 90%;
+  }
+
+  nav .left-items,
+  nav .right-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px;
+  }
+
+  nav .left-items {
+    margin-top: 100px;
+  }
+
+  .left-items,
+  .right-items,
+  .bottom-items,
+  .more {
+    display: block;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .bottom-items h3 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .bottom-items ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .more {
+    color: #fff;
+  }
+
+  .more h3 {
+    margin-bottom: 20px;
+  }
+
+  nav a,
+  .try-button,
+  .more-button {
+    color: #fff;
+  }
 }

@@ -44,51 +44,109 @@ const Navbar = () => {
           </button>
         )}
 
-        {showMenuItems && (
-          <ul>
-            <div className="left-items">
-              <li>
-                <a href="">Live</a>
-              </li>
-              <li>
-                <a href="">Push</a>
-              </li>
-              <li>
-                <a href="">Note</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Shop</a>
-              </li>
-              <li>
-                <a href="">Packs</a>
-              </li>
-              <li>
-                <a href="">Help</a>
-              </li>
-              <li>
-                <a className="more-button" href="">
-                  More +
-                </a>
-              </li>
-            </div>
+        <ul className={`menu-items ${showMenuItems ? "active" : ""}`}>
+          <div className="left-items">
+            <li>
+              <a href="">Live</a>
+            </li>
+            <li>
+              <a href="">Push</a>
+            </li>
+            <li>
+              <a href="">Note</a>
+            </li>
+            <li>
+              <a href="">Link</a>
+            </li>
+            <li>
+              <a href="">Shop</a>
+            </li>
+            <li>
+              <a href="">Packs</a>
+            </li>
+            <li>
+              <a href="">Help</a>
+            </li>
+            <li>
+              <a className="more-button" href="">
+                More +
+              </a>
+            </li>
+          </div>
 
-            <div className="right-items">
+          <div className="right-items">
+            <li>
+              <a className="try-button" href="">
+                Try Live for free
+              </a>
+            </li>
+            <li>
+              <a className="auth-button" href="">
+                Log in or register
+              </a>
+            </li>
+          </div>
+
+          <div className="bottom-items">
+            <h3>More on Ableton.com</h3>
+            <ul>
               <li>
-                <a className="try-button" href="">
-                  Try Live for free
-                </a>
+                <a href="">Blog</a>
               </li>
               <li>
-                <a className="auth-button" href="">
-                  Log in or register
-                </a>
+                <a href="">Ableton for Classroom</a>
               </li>
-            </div>
-          </ul>
-        )}
+              <li>
+                <a href="">Ableton for Colleges and Universities</a>
+              </li>
+              <li>
+                <a href="">Certified Training</a>
+              </li>
+              <li>
+                <a href="">About Ableton</a>
+              </li>
+              <li>
+                <a href="">Jobs</a>
+              </li>
+              <li>
+                <a href="">Apprenticeships</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="more">
+            <h3>More from Ableton:</h3>
+            <ul>
+              <li>
+                <h4>Loop</h4>
+                <p>
+                  Watch Talks, Performances and Features from Ableton's Summit
+                  for Music Makers
+                </p>
+              </li>
+              <li>
+                <h4>Learning Music</h4>
+                <p>
+                  Learn the fundamentals of music making right in your browser.
+                </p>
+              </li>
+              <li>
+                <h4>Learning Synths</h4>
+                <p>
+                  Get started with synthesis using a web-based synth and
+                  accompanying lessons.
+                </p>
+              </li>
+              <li>
+                <h4>Making Music</h4>
+                <p>
+                  Some tips from 74 Creative Strategies for Electronic
+                  Producers.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </ul>
       </nav>
     </>
   );
